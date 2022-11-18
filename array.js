@@ -82,7 +82,7 @@ let productName =  url.split("/")[1];
 
 //for in 
 
-for(let item, in foods){
+for(let item in foods){
     console.log(foods[item]);
 }
 
