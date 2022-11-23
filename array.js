@@ -68,7 +68,7 @@ let productName =  url.split("/")[1];
 //     let item = foods[i]
 //     console.log(item);
 // }
-
+``
 
 // for of
 
@@ -82,8 +82,122 @@ let productName =  url.split("/")[1];
 
 //for in 
 
-for(let item in foods){
-    console.log(foods[item]);
+// for(let item in foods){
+//     console.log(foods[item]);
+// }
+
+//copy array
+
+const soccer = ["Messi","Ronaldo","Benzema","Modric"];
+const club = ["Chelsea","RealMadrid","PSG"];
+
+let copy = [];
+
+// copy = [...soccer, "=>",...club];
+// console.log(copy);
+
+// for(let soc of soccer){
+//     if(soc.startsWith("M"))
+//     copy.push(soc);
+    
+// }
+// console.log(copy);
+
+
+// copy = club.slice(0);
+// console.log(copy);
+
+let lenth = club.length;
+for(let i = 0; i < lenth; i++){
+    copy.push(club[i]);
+
 }
+
+// console.log(copy);
+
+const users = [
+    {
+        "id":1,
+        "firstname":"Adebayo",
+        "lastname":"Michael",
+        "age":23,
+        "gender":"male",
+        "subjects":["Java","C++","Javasript"]
+    },
+    {
+        "id":2,
+        "firstname":"Promise",
+        "lastname":"Faithful",
+        "age":19,
+        "gender":"female",
+        "subjects":["HTML","Javasript"]
+    },
+
+    {
+        "id":3,
+        "firstname":"Salisu",
+        "lastname":"Buhari",
+        "age":72,
+        "gender":"male",
+        "subjects":["Animal Husbandry"]
+    },
+
+    {
+        "id":4,
+        "firstname":"Okowa",
+        "lastname":"Ifeanyi",
+        "age":33,
+        "gender":"female",
+        "subjects":["C#","Python++"]
+    },
+]
+//filter
+
+function getgender(gender){
+ const filterGender = users.filter(user=>user.gender===gender);
+ return filterGender;
+}
+
+// console.log(users);
+
+// console.log(getgender("female"));
+
+function getgenderwithage(gender, age){
+    const resilt = users.filter(user=>user.gender===gender && user.age>=age);
+    return resilt;
+}
+
+//get a specific user
+
+
+function getUser(id){
+    let userid = users.find(user=>user.id===id)
+//   const person = users.filter(user=>user.id===id);
+//   return person;
+if(userid !==undefined){
+    return userid;
+}else{
+    return "User with id "+id +" does not found";
+}
+
+
+}
+
+// console.log(getgenderwithage("female",20));
+
+// let btn = document.querySelector(".btn");
+
+// btn.addEventListener("click",()=>{
+//     let gender = document.querySelector(".sex").value;
+//     console.log(getgender(gender));
+
+// });
+
+console.log(getUser(9));
+
+
+
+
+
 
 
