@@ -52,7 +52,32 @@ for(let val of mul){
 return sum;
 }
 
-console.log(secondMethod(values));
+// console.log(secondMethod(values));
+
+const fruits = ['Banana','Orange','Apple','Orange','Banana','Pear','Banana']
+
+let occurence = fruits.reduce((acc,curentVal)=>{
+     return {...acc, [curentVal]:(acc[curentVal]|| 0 )+1}
+},{});
+
+// console.log(occurence);
+
+// console.log(fruits[0]);
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
